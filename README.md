@@ -110,7 +110,7 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [x] VirtualBox laboratory configured.
 - [x] OpenSSH server installed and enabled.
 - [x] Remote SSH access verified from Windows PowerShell.
-- [ ] Snapshot `00-clean-install` created.
+- [x] Snapshot `00-clean-install` created.
 - [ ] Initial system baseline.
 - [ ] Bash audit modules (C01-C12).
 - [ ] Remediation and re-audit.
