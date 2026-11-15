@@ -50,9 +50,9 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 
 | ID | Control | Status |
 |---|---|---|
-| C01 | System inventory | Planned |
-| C02 | Users and groups | Planned |
-| C03 | Privileged accounts (UID 0) | Planned |
+| C01 | System inventory | Completed |
+| C02 | Users and groups | In Progress |
+| C03 | Privileged accounts (UID 0) | In Progress |
 | C04 | Sudo privileges | Planned |
 | C05 | Critical file permissions | Planned |
 | C06 | SSH service | Planned |
@@ -111,10 +111,13 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [x] OpenSSH server installed and enabled.
 - [x] Remote SSH access verified from Windows PowerShell.
 - [x] Snapshot `00-clean-install` created.
-- [ ] Initial system baseline.
-- [ ] Bash audit modules (C01-C12).
-- [ ] Remediation and re-audit.
-- [ ] Comparison with Lynis.
+- [x] C01 System inventory documented.
+- [ ] C02 Users and Groups — In Progress.
+- [ ] C03 Privileged Accounts (UID 0) — In Progress.
+- [ ] C04-C12 Security controls — Planned.
+- [ ] Bash audit automation.
+- [ ] Security remediation and re-audit.
+- [ ] Lynis comparison.
 - [ ] Final audit report.
 
 ## Security References
