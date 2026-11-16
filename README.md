@@ -53,7 +53,7 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 | C01 | System inventory | Completed |
 | C02 | Users and groups | In Progress |
 | C03 | Privileged accounts (UID 0) | In Progress |
-| C04 | Sudo privileges | Planned |
+| C04 | Sudo privileges | In Progress |
 | C05 | Critical file permissions | Planned |
 | C06 | SSH service | Planned |
 | C07 | SSH root login | Planned |
@@ -106,15 +106,28 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 
 ## Current Progress
 
+### Infrastructure
 - [x] Ubuntu Server 24.04.5 LTS installed.
 - [x] VirtualBox laboratory configured.
 - [x] OpenSSH server installed and enabled.
 - [x] Remote SSH access verified from Windows PowerShell.
 - [x] Snapshot `00-clean-install` created.
-- [x] C01 System inventory documented.
-- [ ] C02 Users and Groups — In Progress.
-- [ ] C03 Privileged Accounts (UID 0) — In Progress.
-- [ ] C04-C12 Security controls — Planned.
+
+### Learning Progress
+- [x] Block 1 — System Inventory.
+- [x] Block 2 — Identities and Privileges.
+- [x] Block 3 — Permissions and Administration.
+- [ ] Block 4 — SSH Service and Access.
+
+### Security Audit Controls
+- [x] C01 — System Inventory documented.
+- [ ] C02 — Users and Groups: initial evidence and documentation added; audit in progress.
+- [ ] C03 — Privileged Accounts (UID 0): audit pending completion.
+- [ ] C04 — Sudo Privileges: initial review performed.
+- [ ] C05 — Critical File Permissions: audit planned.
+- [ ] C06-C12 — Pending audit.
+
+### Project Development
 - [ ] Bash audit automation.
 - [ ] Security remediation and re-audit.
 - [ ] Lynis comparison.
