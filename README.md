@@ -46,8 +46,6 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 - Host side: `127.0.0.1:2222` (loopback only, not exposed to the local network)
 - Guest side: port `22` (OpenSSH)
 
-## Audit Scope: 12 Controls
-
 | ID | Control | Status |
 |---|---|---|
 | C01 | System inventory | Completed |
@@ -55,9 +53,9 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 | C03 | Privileged accounts (UID 0) | In Progress |
 | C04 | Sudo privileges | In Progress |
 | C05 | Critical file permissions | Planned |
-| C06 | SSH service | Planned |
-| C07 | SSH root login | Planned |
-| C08 | SSH authentication method | Planned |
+| C06 | SSH service | In Progress |
+| C07 | SSH root login | In Progress |
+| C08 | SSH authentication method | In Progress |
 | C09 | Firewall | Planned |
 | C10 | Listening ports and services | Planned |
 | C11 | Security updates | Planned |
@@ -76,7 +74,7 @@ Each control gets its own sheet: objective, risk, procedure, evidence, result, r
 
 ## Repository Structure
 
-Planned layout (folders will be added as the project grows):
+Repository structure:
 
 - `docs/` architecture, methodology and lab journal
 - `docs/controls/` individual control documentation
@@ -117,15 +115,20 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [x] Block 1 — System Inventory.
 - [x] Block 2 — Identities and Privileges.
 - [x] Block 3 — Permissions and Administration.
-- [ ] Block 4 — SSH Service and Access.
+- [x] Block 4 — SSH Service and Access.
+- [ ] Block 5 — Network Exposure.
+- [ ] Block 6 — Maintenance and Logs.
 
 ### Security Audit Controls
 - [x] C01 — System Inventory documented.
 - [ ] C02 — Users and Groups: initial evidence and documentation added; audit in progress.
 - [ ] C03 — Privileged Accounts (UID 0): audit pending completion.
-- [ ] C04 — Sudo Privileges: initial review performed.
-- [ ] C05 — Critical File Permissions: audit planned.
-- [ ] C06-C12 — Pending audit.
+- [ ] C04 — Sudo Privileges: initial review performed; audit in progress.
+- [ ] C05 — Critical File Permissions: audit pending.
+- [ ] C06 — SSH Service: initial review and evidence collected; audit in progress.
+- [ ] C07 — SSH Root Login: effective configuration reviewed; audit in progress.
+- [ ] C08 — SSH Authentication Method: authentication settings reviewed; audit in progress.
+- [ ] C09-C12 — Pending audit.
 
 ### Project Development
 - [ ] Bash audit automation.
