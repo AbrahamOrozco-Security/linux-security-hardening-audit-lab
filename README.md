@@ -46,6 +46,8 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 - Host side: `127.0.0.1:2222` (loopback only, not exposed to the local network)
 - Guest side: port `22` (OpenSSH)
 
+## Audit Scope: 12 Controls
+
 | ID | Control | Status |
 |---|---|---|
 | C01 | System inventory | Completed |
@@ -56,8 +58,8 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 | C06 | SSH service | In Progress |
 | C07 | SSH root login | In Progress |
 | C08 | SSH authentication method | In Progress |
-| C09 | Firewall | Planned |
-| C10 | Listening ports and services | Planned |
+| C09 | Firewall | In Progress |
+| C10 | Listening ports and services | In Progress |
 | C11 | Security updates | Planned |
 | C12 | Authentication logs | Planned |
 
@@ -110,6 +112,7 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [x] OpenSSH server installed and enabled.
 - [x] Remote SSH access verified from Windows PowerShell.
 - [x] Snapshot `00-clean-install` created.
+- [x] Snapshot `01-pre-firewall-hardening` created.
 
 ### Learning Progress
 - [x] Block 1 — System Inventory.
@@ -128,7 +131,10 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [ ] C06 — SSH Service: initial review and evidence collected; audit in progress.
 - [ ] C07 — SSH Root Login: effective configuration reviewed; audit in progress.
 - [ ] C08 — SSH Authentication Method: authentication settings reviewed; audit in progress.
-- [ ] C09-C12 — Pending audit.
+- [ ] C09 — Firewall: initial configuration reviewed; baseline evidence collected; hardening pending.
+- [ ] C10 — Listening Ports and Services: initial review of ports, processes, network interfaces and routing completed; documentation in progress.
+- [ ] C11 — Security Updates: audit pending.
+- [ ] C12 — Authentication Logs: audit pending.
 
 ### Project Development
 - [ ] Bash audit automation.
