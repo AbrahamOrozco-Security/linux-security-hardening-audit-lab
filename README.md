@@ -52,7 +52,7 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 |---|---|---|
 | C01 | System inventory | Completed |
 | C02 | Users and groups | Completed |
-| C03 | Privileged accounts (UID 0) | In Progress |
+| C03 | Privileged accounts (UID 0) | Completed |
 | C04 | Sudo privileges | In Progress |
 | C05 | Critical file permissions | Planned |
 | C06 | SSH service | In Progress |
@@ -125,7 +125,7 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 ### Security Audit Controls
 - [x] C01 — System Inventory documented.
 - [x] C02 — Users and Groups: account and group memberships reviewed; unnecessary LXD membership removed and verified.
-- [ ] C03 — Privileged Accounts (UID 0): audit pending completion.
+- [x] C03 — Privileged Accounts (UID 0): root confirmed as the only account with UID 0; evidence and documentation added.
 - [ ] C04 — Sudo Privileges: initial review performed; audit in progress.
 - [ ] C05 — Critical File Permissions: audit pending.
 - [ ] C06 — SSH Service: initial review and evidence collected; audit in progress.
