@@ -58,8 +58,8 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 | C06 | SSH service | Completed |
 | C07 | SSH root login | Completed |
 | C08 | SSH authentication method | Completed |
-| C09 | Firewall | In Progress |
-| C10 | Listening ports and services | In Progress |
+| C09 | Firewall | Completed |
+| C10 | Listening ports and services | Completed |
 | C11 | Security updates | Planned |
 | C12 | Authentication logs | Planned |
 
@@ -131,14 +131,14 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [x] C06 — SSH Service: service status and automatic startup reviewed and documented.
 - [x] C07 — SSH Root Login: effective root login configuration reviewed and documented.
 - [x] C08 — SSH Authentication Method: password and public key authentication settings reviewed and documented.
-- [ ] C09 — Firewall: initial audit completed; UFW configured and enabled; SSH access verified; final documentation pending.
-- [ ] C10 — Listening Ports and Services: initial and post-hardening network checks performed; final documentation pending.
+- [x] C09 — Firewall: UFW configured, enabled and verified; SSH connectivity maintained after hardening.
+- [x] C10 — Listening Ports and Services: listening ports and services reviewed before and after firewall configuration.
 - [ ] C11 — Security Updates: audit pending.
 - [ ] C12 — Authentication Logs: audit pending.
       
 ### Project Development
 - [ ] Bash audit automation.
-- [ ] Security remediation and re-audit: firewall hardening performed; final documentation and comparison pending.
+- [ ] Security remediation and re-audit: firewall hardening performed and documented; final comparison pending.
 - [ ] Lynis comparison.
 - [ ] Final audit report.
 
