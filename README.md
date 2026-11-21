@@ -131,14 +131,14 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [ ] C06 — SSH Service: initial review and evidence collected; audit in progress.
 - [ ] C07 — SSH Root Login: effective configuration reviewed; audit in progress.
 - [ ] C08 — SSH Authentication Method: authentication settings reviewed; audit in progress.
-- [ ] C09 — Firewall: initial configuration reviewed; baseline evidence collected; hardening pending.
-- [ ] C10 — Listening Ports and Services: initial review of ports, processes, network interfaces and routing completed; documentation in progress.
+- [ ] C09 — Firewall: initial audit completed; UFW configured and enabled; SSH access verified; final documentation pending.
+- [ ] C10 — Listening Ports and Services: initial and post-hardening network checks performed; final documentation pending.
 - [ ] C11 — Security Updates: audit pending.
 - [ ] C12 — Authentication Logs: audit pending.
-
+      
 ### Project Development
 - [ ] Bash audit automation.
-- [ ] Security remediation and re-audit.
+- [ ] Security remediation and re-audit: firewall hardening performed; final documentation and comparison pending.
 - [ ] Lynis comparison.
 - [ ] Final audit report.
 
