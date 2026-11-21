@@ -1,22 +1,51 @@
-# C02 – User and Group Enumeration
+# C02 – Users and Groups
 
 ## Objective
-Identify the user accounts registered in the Ubuntu Server system.
+Review the user accounts and groups configured on the Ubuntu Server.
 
-## Command
+## Audit
+
+The account `abraham_orozco` was reviewed.
+
+| Attribute | Value |
+|---|---|
+| UID | 1000 |
+| Primary group | abraham_orozco |
+| Home directory | /home/abraham_orozco |
+| Shell | /bin/bash |
+
+The account initially belonged to these groups:
+
+- adm
+- cdrom
+- sudo
+- dip
+- plugdev
+- lxd
+
+## Finding and Action
+
+The user was a member of the `lxd` group, although LXD was not used.
+
+I removed the account from this group using:
+
 ```bash
-getent passwd | cut -d: -f1
+sudo gpasswd -d abraham_orozco lxd
 ```
 
-## Command Description
-- `getent passwd`: retrieves account information from the system's configured user database.
-- `cut -d: -f1`: extracts the first field, using the colon (`:`) as the delimiter. This field contains the username.
+## Verification
 
-## Observation
-The command displays the registered system and regular user accounts, including `root`, service accounts, and `abraham_orozco`.
+The following checks confirmed the change:
+
+- `getent group lxd`: the group no longer lists the user.
+- `id abraham_orozco`: the account no longer belongs to `lxd`.
+- Membership in `sudo` remains unchanged.
 
 ## Result
-User account enumeration successfully performed.
+
+The unnecessary `lxd` membership was removed. The account's group membership was verified.
 
 ## Evidence
-`evidence/C02-01-user-account-enumeration.png`
+
+- `C02-01-user-account-enumeration.png`
+- Final group membership verification (to be added).
