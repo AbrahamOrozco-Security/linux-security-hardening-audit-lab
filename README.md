@@ -60,10 +60,10 @@ The VM is administered over SSH through a VirtualBox NAT port-forwarding rule.
 | C08 | SSH authentication method | Completed |
 | C09 | Firewall | Completed |
 | C10 | Listening ports and services | Completed |
-| C11 | Security updates | Planned |
-| C12 | Authentication logs | Planned |
+| C11 | Security updates | Completed |
+| C12 | Authentication logs | Completed |
 
-Each control gets its own sheet: objective, risk, procedure, evidence, result, recommendation, re-test and references.
+Each control has an individual document summarizing its objective, audit, findings, results and supporting evidence.
 
 ## Audit Methodology
 
@@ -87,7 +87,7 @@ Repository structure:
 
 ## Lab Journal
 
-My working notes live in `docs/lab-journal.md` (coming soon).
+My working notes and laboratory activities are documented in `docs/lab-journal.md`.
 
 ## Troubleshooting Log
 
@@ -119,8 +119,8 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [x] Block 2 — Identities and Privileges.
 - [x] Block 3 — Permissions and Administration.
 - [x] Block 4 — SSH Service and Access.
-- [ ] Block 5 — Network Exposure.
-- [ ] Block 6 — Maintenance and Logs.
+- [x] Block 5 — Network Exposure.
+- [x] Block 6 — Maintenance and Logs.
 
 ### Security Audit Controls
 - [x] C01 — System Inventory documented.
@@ -133,8 +133,8 @@ After reviewing VirtualBox logs and reducing the VM allocation to 1 vCPU, the in
 - [x] C08 — SSH Authentication Method: password and public key authentication settings reviewed and documented.
 - [x] C09 — Firewall: UFW configured, enabled and verified; SSH connectivity maintained after hardening.
 - [x] C10 — Listening Ports and Services: listening ports and services reviewed before and after firewall configuration.
-- [ ] C11 — Security Updates: audit pending.
-- [ ] C12 — Authentication Logs: audit pending.
+- [x] C11 — Security Updates: 61 packages upgraded, including 16 standard LTS security updates; new kernel verified and no pending updates remained.
+- [x] C12 — Authentication Logs: SSH authentication events, login history and failed login attempts reviewed and documented.
       
 ### Project Development
 - [ ] Bash audit automation.
