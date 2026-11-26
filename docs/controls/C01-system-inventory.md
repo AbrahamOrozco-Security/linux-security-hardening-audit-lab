@@ -2,7 +2,7 @@
 
 ## Objective
 
-Identify the main characteristics and resources of the Ubuntu Server before performing security audits.
+Identify the main characteristics and resources of the Ubuntu Server environment used for the security assessment.
 
 ## System Information
 
@@ -10,7 +10,8 @@ Identify the main characteristics and resources of the Ubuntu Server before perf
 |---|---|
 | Hostname | ubuntu-auditlab |
 | Operating System | Ubuntu Server 24.04.5 LTS |
-| Kernel | 6.8.0-149-generic |
+| Initial Kernel | 6.8.0-149-generic |
+| Kernel after security updates | 6.8.0-151-generic |
 | Architecture | x86_64 |
 | Virtualization | Oracle VirtualBox |
 | CPU Model | Intel Core i7-14650HX |
@@ -24,6 +25,7 @@ Identify the main characteristics and resources of the Ubuntu Server before perf
 | Device | Size | Description |
 |---|---|---|
 | sda | 30 GB | Virtual disk |
+| sda1 | 1 MB | Partition |
 | sda2 | 2 GB | Boot partition |
 | sda3 | 28 GB | LVM partition |
 | Root Logical Volume | 14 GB | Ubuntu root filesystem |
@@ -33,16 +35,23 @@ Identify the main characteristics and resources of the Ubuntu Server before perf
 - `hostnamectl`
 - `uname -r`
 - `uname -m`
-- `uptime`
-- `free -h`
-- `df -h /`
-- `lsblk`
 - `lscpu`
+- `free -h`
+- `lsblk`
+- `df -h /`
 
 ## Result
 
-The initial system inventory was completed successfully. The operating system, kernel, CPU, memory and storage configuration were identified.
+The system inventory was documented successfully. The operating system, kernel, CPU, memory, virtualization platform, and storage configuration were identified.
+
+The initial kernel version was `6.8.0-149-generic`. Following the security update process documented in C11, the system was updated to kernel version `6.8.0-151-generic`.
 
 ## Observation
 
-The root logical volume has a capacity of 14 GB, while the virtual disk has a capacity of 30 GB. The remaining volume allocation requires further inspection.
+The root logical volume has a capacity of 14 GB, while the virtual disk has a capacity of 30 GB. The remaining volume allocation was not investigated further as part of this control.
+
+## Evidence
+
+**Current system inventory after security updates:**
+
+![C01 System Inventory](../../evidence/C01-01-system-inventory.png)
