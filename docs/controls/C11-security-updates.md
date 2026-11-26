@@ -24,5 +24,8 @@ The server was rebooted and the new kernel was verified. A final package check s
 
 ## Evidence
 
-- Initial pending updates.
-- `C11-02-updates-after-upgrade.png`
+## Evidence
+
+- `C11-02-updates-after-upgrade (2).png`
+
+The initial pending updates and package upgrade results are documented in the audit findings. A separate screenshot of the initial package listing is not included in the repository evidence.
