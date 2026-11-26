@@ -22,4 +22,4 @@ The SSH server allows connections using either authentication method. No configu
 
 ## Evidence
 
-- `B04-02-ssh-effective-configuration.png`  
+- `B04-02-ssh-effective-configuration..png`
