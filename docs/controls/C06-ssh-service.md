@@ -21,5 +21,4 @@ The SSH service is operational and configured to start automatically.
 
 ## Evidence
 
-- SSH service status screenshot.
-- SSH listening port screenshot (port 22).
+- `B04-01-ssh-service-and-ports (2).png`
