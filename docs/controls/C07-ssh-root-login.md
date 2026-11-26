@@ -19,4 +19,4 @@ Root password authentication is restricted. No configuration changes were made.
 
 ## Evidence
 
-- `B04-02-ssh-effective-configuration.png`
+- `B04-02-ssh-effective-configuration..png`
