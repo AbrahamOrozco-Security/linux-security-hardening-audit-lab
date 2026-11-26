@@ -47,5 +47,7 @@ The unnecessary `lxd` membership was removed. The account's group membership was
 
 ## Evidence
 
+## Evidence
+
 - `C02-01-user-account-enumeration.png`
-- Final group membership verification (to be added).
+- `C02-02-user-group-memberships.png`
